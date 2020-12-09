@@ -110,7 +110,7 @@ open class YoutubePlayerView: UIView {
             webConfiguration.requiresUserActionForMediaPlayback = false
         }
         
-        webConfiguration.allowsInlineMediaPlayback = true
+        webConfiguration.allowsInlineMediaPlayback = UIDevice.current.userInterfaceIdiom == .pad ? false : true
         return webConfiguration
     }
     
